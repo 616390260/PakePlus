@@ -1,26 +1,17 @@
-console.log(
-    '%cbuild from PakePlus https://github.com/Sjj1024/PakePlus',
-    'color:orangered;font-weight:bolder'
-)
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+      <script type="module" src="/@vite/client"></script>
 
-// very important, if you don't know what it is, don't touch it
-// 非常重要，不懂代码不要动
-const hookClick = (e) => {
-    const origin = e.target.closest('a')
-    const isBaseTargetBlank = document.querySelector(
-        'head base[target="_blank"]'
-    )
-    console.log('origin', origin, isBaseTargetBlank)
-    if (
-        (origin && origin.href && origin.target === '_blank') ||
-        (origin && origin.href && isBaseTargetBlank)
-    ) {
-        e.preventDefault()
-        console.log('handle origin', origin)
-        location.href = origin.href
-    } else {
-        console.log('not handle origin', origin)
-    }
-}
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/app.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="/vconsole.min.js"></script>
+        <title>PakePlus</title>
+    </head>
 
-document.addEventListener('click', hookClick, { capture: true })
+    <body>
+        <div id="app"></div>
+        <script type="module" src="/src/main.ts?t=1765954768534"></script>
+    </body>
+</html>
